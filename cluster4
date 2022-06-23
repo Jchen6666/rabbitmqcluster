@@ -5,20 +5,19 @@ metadata:
     app: rabbitmq
   name: rabbitmq
 spec:
-  replicas: 2
+  replicas: 3
   image: rabbitmq:3.9.11
   service:
     type: ClusterIP
-  volumes: 
-    - name: task-pv-storage 
-        persistentVolumeClaim: 
-           claimName: task-pv-claim
+  persistence:
+    storageClassName: local-storage
+    storage: 10
   resources:
     requests:
-      cpu: 128m
+      cpu: 256m
       memory: 1Gi
     limits:
-      cpu: 128m
+      cpu: 256m
       memory: 1Gi
   rabbitmq:
     additionalPlugins:
