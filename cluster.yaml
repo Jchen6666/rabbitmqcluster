@@ -18,10 +18,10 @@ spec:
       claimName: task-pv-claim
   resources:
     requests:
-      cpu: 256m
+      cpu: 128m
       memory: 1Gi
     limits:
-      cpu: 256m
+      cpu: 128m
       memory: 1Gi
   rabbitmq:
     additionalPlugins:
