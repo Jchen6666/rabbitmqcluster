@@ -12,6 +12,8 @@ spec:
   persistence:
     storageClassName: hostpath
     storage: 10
+  accessModes:
+    - ReadWriteOnce
   resources:
     requests:
       cpu: 64mi
