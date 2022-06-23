@@ -12,10 +12,6 @@ spec:
   persistence:
     storageClassName: hostpath
     storage: 10
-  volumes: 
-  - name: task-pv-storage 
-    persistentVolumeClaim: 
-      claimName: task-pv-claim
   resources:
     requests:
       cpu: 128m
