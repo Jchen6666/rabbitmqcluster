@@ -5,7 +5,7 @@ metadata:
     app: rabbitmq
   name: rabbitmq
 spec:
-  replicas: 3
+  replicas: 2
   image: rabbitmq:3.9.11
   service:
     type: ClusterIP
@@ -15,10 +15,10 @@ spec:
   resources:
     requests:
       cpu: 256m
-      memory: 1Gi
+      memory: 512m
     limits:
       cpu: 256m
-      memory: 1Gi
+      memory: 512m
   rabbitmq:
     additionalPlugins:
       - rabbitmq_management
