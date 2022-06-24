@@ -11,8 +11,8 @@ spec:
     type: ClusterIP
   volumes:
     -name: task-pv-storage
-     persistentVolumeClaim: 
-      claimName: task-pv-claim
+    persistentVolumeClaim: 
+     claimName: task-pv-claim
   resources:
     requests:
       cpu: 256m
