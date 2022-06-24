@@ -5,7 +5,7 @@ metadata:
     app: rabbitmq
   name: rabbitmq
 spec:
-  replicas: 2
+  replicas: 1
   image: rabbitmq:3.9.11
   service:
     type: ClusterIP
@@ -15,11 +15,11 @@ spec:
     existingClaim: task-pv-claim
   resources:
     requests:
-      cpu: 256m
-      memory: 1Gi
+      cpu: 200m
+      memory: 200m
     limits:
-      cpu: 256m
-      memory: 1Gi
+      cpu: 200m
+      memory: 200m
   rabbitmq:
     additionalPlugins:
       - rabbitmq_management
