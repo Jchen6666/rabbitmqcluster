@@ -5,13 +5,13 @@ metadata:
     app: rabbitmq
   name: rabbitmq
 spec:
-  replicas: 3
+  replicas: 1
   image: rabbitmq:3.9.11
   service:
     type: ClusterIP
   persistence:
     storageClassName: standard
-    storage: 10
+    storage: 0
   resources:
     requests:
       cpu: 256m
