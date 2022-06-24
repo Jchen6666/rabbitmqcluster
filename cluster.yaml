@@ -14,11 +14,11 @@ spec:
     storage: 10
   resources:
     requests:
-      cpu: 256m
-      memory: 512m
+      cpu: 128m
+      memory: 256m
     limits:
-      cpu: 256m
-      memory: 512m
+      cpu: 128m
+      memory: 256m
   rabbitmq:
     additionalPlugins:
       - rabbitmq_management
