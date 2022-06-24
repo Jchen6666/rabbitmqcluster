@@ -10,16 +10,17 @@ spec:
   service:
     type: ClusterIP
   persistence:
-    type: pvc
-    enabled: true
-    existingClaim: task-pv-claim
+    storageClassName: hostpath
+    storage: 10
+  accessModes:
+    - ReadWriteOnce
   resources:
     requests:
       cpu: 200m
-      memory: 200m
+      memory: 250m
     limits:
       cpu: 200m
-      memory: 200m
+      memory: 250m
   rabbitmq:
     additionalPlugins:
       - rabbitmq_management
